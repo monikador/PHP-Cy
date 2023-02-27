@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="5.204" tests="2" failures="1">
+  <testsuite name="Root Suite" timestamp="2023-02-07T08:28:53" tests="0" file="cypress/e2e/invoke.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="E2E - Invoke" timestamp="2023-02-07T08:28:53" tests="2" time="5.192" failures="1">
+    <testcase name="E2E - Invoke Should open home page - automationpractice.com" time="0.938" classname="Should open home page - automationpractice.com">
+    </testcase>
+    <testcase name="E2E - Invoke Should get info from element" time="0.000" classname="Should get info from element">
+      <failure message="Timed out retrying after 4000ms: Expected to find element: `[title=&quot;Contact us&quot;]`, but never found it." type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: Expected to find element: `[title="Contact us"]`, but never found it.
+    at Context.eval (webpack:///./cypress/e2e/invoke.cy.js:9:11)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>
