@@ -10,9 +10,9 @@ function getConfigurationByFile(file) {
 
 module.exports = defineConfig({
         includeShadowDom: true,
-        chromeWebSecurity: true,
         viewportHeight: 1080,
         viewportWidth: 1920,
+        chromeWebSecurity: false,
         video: false,
         reporter: 'cypress-multi-reporters',
         reporterOptions: {

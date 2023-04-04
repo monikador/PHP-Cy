@@ -15,6 +15,24 @@ import "cypress-audit/commands";
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
 //
+Cypress.Commands.add("openMainURL", () => {
+    cy.visit("https://phptravels.net/login");
+})
+
+
+//trening
+Cypress.Commands.add('solveGoogleReCAPTCHA', () => {
+    // Wait until the iframe (Google reCAPTCHA) is totally loaded
+    cy.wait(500);
+    cy.get('#google-recaptcha-domainchecker1 *> iframe')
+        .then($iframe => {
+            const $body = $iframe.contents().find('body');
+            cy.wrap($body)
+                .find('.recaptcha-checkbox-border')
+                .should('be.visible')
+                .click();
+        });
+});
 Cypress.Commands.add("openTshirtsTab", () => {
     cy.visit("http://automationpractice.com/index.php?id_category=5&controller=category");
 })
